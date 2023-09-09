@@ -463,50 +463,6 @@ fi
 # Verify that $MAKE is accessible
 #
 PATHMAKE=`findApp ${MAKE} $PATH`
-if [ "$PATHMAKE" ]; then
-    Note "Using $PATHMAKE to configure the software."
-    (echo 'all:') | ${MAKE} -f - all >/dev/null 2>&5 || {
-	cat<<EOF
-
-Something is wrong with "$MAKE" or $MAKE does not accept Makefiles
-from stdin with "-f -".  If you have MAKE set in your environment,
-verify it points to the right program you want to" use to build this
-software.  Otherwise, verify that you have the make program installed
-somewhere on your system and set the MAKE environment variable to the
-pathname of the program.
-EOF
-	boom
-    }
-else
-    cat<<EOF
-No $MAKE located in the search path.
-
-There was no $MAKE program in the restricted search used by this script
-If $MAKE is in a non-standard location set the MAKE environment variable
-to the pathname of the appropriate program.
-EOF
-    boom
-fi
-
-#
-# Check whether or not $MAKE automatically sets MAKE
-# in the Makefiles.  If not, we add an explicit define
-# for places where recursive calls are made.
-#
-if [ -z "$SETMAKE" ]; then
-M=
-eval `(cat<<'EOF'
-all:
-	@echo M="${MAKE}"
-EOF
-) | $MAKE -f - 2>&5`
-    if [ "$M" ]; then
-	SETMAKE=
-    else
-	Note "Looks like $MAKE does not setup MAKE in Makefiles, will compensate."
-	SETMAKE="MAKE	= ${MAKE}"
-    fi
-fi
 
 test "$AR" || AR=`findApp ar $PATH`
 if [ -z "$AR" ]; then
@@ -779,24 +735,7 @@ CheckForBigEndian()
 #
 CheckPortDotH()
 {
-    getConfigTag()
-    {
-	param=`grep "$1:" $2 | sed -e 's/.*:[ 	]*\([^ 	]*\).*/\1/'`
-    }
-    getConfigTag TARGET port.h; target="$param"
-    getConfigTag CCOMPILER port.h; ccompiler="$param"
-    CCOMP=$CCOMPILER
-    if [ $ISGCC = yes ]; then
-	getGCCVersion()
-	{
-	    eval `$1 -v 2>&1 | \
-		sed -n -e '/version/s/.* \([0-9]*\)\.\([0-9]*\).\([0-9]*\)/GCCdist=\1;GCCmajor=\2;GCCminor=\3/p'`
-	    GCCversion="${GCCdist}.${GCCmajor}.${GCCminor}"
-	}
-	getGCCVersion $CCOMPILER
-	CCOMP="${CCOMP}-${GCCversion}"
-    fi
-    test "$target" = "$TARGET" && test "$ccompiler" = "$CCOMP"
+    test "yes" = "no"
 }
 
 #
