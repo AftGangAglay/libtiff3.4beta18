@@ -378,7 +378,7 @@ main(int argc, char* argv) { exit(0); }
 EOF
 
 : ${ENVOPTS=}
-CCOMPILER=
+CCOMPILER=cc
 for i in $CC gcc cc ncc dcc xlc c89 gcc2; do
     if isGNU $i; then
 	ISGCC=yes
