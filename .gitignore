@@ -3,6 +3,8 @@ config.log
 *.o
 *.a
 
+*.dSYM
+
 Makefile
 
 man/*.3t
