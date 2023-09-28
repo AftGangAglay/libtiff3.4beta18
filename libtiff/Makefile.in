@@ -184,7 +184,11 @@ tif_version.o: version.h
 #
 tif_fax3sm.c: ${SRCDIR}/mkg3states.c ${SRCDIR}/tif_fax3.h
 	${CC} -o mkg3states ${CFLAGS} ${SRCDIR}/mkg3states.c
-	rm -f tif_fax3sm.c; ./mkg3states -c const tif_fax3sm.c
+ifdef WINDOWS
+	rm -f tif_fax3sm.c; $(CROSS_TOOL) ./mkg3states.exe -c const tif_fax3sm.c
+else
+	rm -f tif_fax3sm.c; $(CROSS_TOOL) ./mkg3states -c const tif_fax3sm.c
+endif
 
 tif_aux.o: ${SRCDIR}/tif_aux.c
 	${CC} -c ${CFLAGS} ${SRCDIR}/tif_aux.c
