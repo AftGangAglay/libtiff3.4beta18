@@ -2,6 +2,7 @@ config.log
 
 *.o
 *.a
+*.exe
 
 *.dSYM
 
