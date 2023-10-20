@@ -36,7 +36,7 @@
 #include <windowsx.h>
 #include <memory.h>
 
-static tsize_t 
+static tsize_t
 _tiffReadProc(thandle_t fd, tdata_t buf, tsize_t size)
 {
 	return (_hread(fd, buf, size));
@@ -157,7 +157,7 @@ _TIFFmemset(tdata_t p, int v, tsize_t c)
 		if (chunk > c)					/* No more than needed */
 			chunk = c;
 		memset(pp, v, chunk);
-		pp = (char*) (chunk + (char huge*) pp);
+		pp = (char*) (chunk + (char*) pp);
 		c -= chunk;
 	}
 }
@@ -166,7 +166,7 @@ void
 _TIFFmemcpy(tdata_t d, const tdata_t s, tsize_t c)
 {
 	if (c > 0xFFFF)
-		hmemcpy((void _huge*) d, (void _huge*) s, c);
+		hmemcpy((void*) d, (void*) s, c);
 	else
 		(void) memcpy(d, s, (size_t) c);
 }
@@ -192,8 +192,8 @@ _TIFFmemcmp(const tdata_t d, const tdata_t s, tsize_t c)
 		result = memcmp(dd, ss, chunk);
 		if (result != 0)
 			return (result);
-		dd = (char*) (chunk + (char huge*) dd);
-		ss = (char*) (chunk + (char huge*) ss);
+		dd = (char*) (chunk + (char*) dd);
+		ss = (char*) (chunk + (char*) ss);
 		c -= chunk;
 	}
 	return (0);

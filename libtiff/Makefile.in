@@ -127,7 +127,6 @@ OBJS	= \
 	tif_strip.o \
 	tif_thunder.o \
 	tif_tile.o \
-	tif_unix.o \
 	tif_version.o \
 	tif_warning.o \
 	tif_write.o \
@@ -140,6 +139,11 @@ all:	${TARGETS}
 	    ${MAKE} dso; \
 	fi
 
+ifdef WINDOWS
+libtiff.a: tif_win3.o
+else
+libtiff.a: tif_unix.o
+endif
 libtiff.a: ${OBJS}
 	${AR} ${AROPTS} libtiff.a $?
 	${RANLIB} libtiff.a
