@@ -1,6 +1,7 @@
 config.log
 
 *.o
+*.obj
 *.a
 *.exe
 
