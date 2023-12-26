@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /*
  * tiff-palette.c -- create a Class P (palette) TIFF file
  *
@@ -275,3 +277,5 @@ Usage()
     fprintf(stderr, "Usage: %s -depth (8 | 4 | 2 | 1) tiff-image\n", programName);
     exit(0);
 }
+
+#endif

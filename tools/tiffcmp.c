@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/tiffcmp.c,v 1.27 1995/07/19 00:39:51 sam Exp $ */
 
 /*
@@ -484,3 +486,5 @@ eof(const char* name, uint32 row, int s)
 		printf(", sample %d", s);
 	printf("\n");
 }
+
+#endif

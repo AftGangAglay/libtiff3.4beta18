@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 #include "port.h"
 /*
  * Copyright (c) 1987 Regents of the University of California.
@@ -97,3 +99,5 @@ strncasecmp(s1, s2, n)
 	}
 	return (0);
 }
+
+#endif

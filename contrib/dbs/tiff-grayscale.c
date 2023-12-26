@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /*
  * tiff-grayscale.c -- create a Class G (grayscale) TIFF file
  *      with a gray response curve in linear optical density
@@ -139,3 +141,5 @@ Usage()
     fprintf(stderr, "Usage: %s -depth (8 | 4 | 2) tiff-image\n", programName);
     exit(0);
 }
+
+#endif

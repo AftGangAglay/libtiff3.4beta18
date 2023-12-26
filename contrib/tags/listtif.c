@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /*
  * listtif.c -- lists a tiff file.
  */
@@ -30,3 +32,4 @@ failure:
 	exit (-1);
 }
 
+#endif

@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/tiffsplit.c,v 1.11 1995/06/06 23:45:26 sam Exp $ */
 
 /*
@@ -228,3 +230,5 @@ cpTiles(TIFF* in, TIFF* out)
 	}
 	return (0);
 }
+
+#endif

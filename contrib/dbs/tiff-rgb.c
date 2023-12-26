@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /*
  * tiff-rgb.c -- create a 24-bit Class R (rgb) TIFF file
  *
@@ -194,3 +196,5 @@ Usage()
     fprintf(stderr, "Usage: %s -gamma gamma tiff-image\n", programName);
     exit(0);
 }
+
+#endif

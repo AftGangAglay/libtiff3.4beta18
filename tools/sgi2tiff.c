@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/sgi2tiff.c,v 1.23 1995/07/01 01:16:55 sam Exp $ */
 
 /*
@@ -289,3 +291,5 @@ usage(void)
 		fprintf(stderr, "%s\n", stuff[i]);
 	exit(-1);
 }
+
+#endif

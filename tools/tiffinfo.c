@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/tiffinfo.c,v 1.24 1995/06/12 15:43:49 sam Exp $ */
 
 /*
@@ -426,3 +428,5 @@ tiffinfo(TIFF* tif, uint16 order, long flags)
 		TIFFReadData(tif);
 	}
 }
+
+#endif

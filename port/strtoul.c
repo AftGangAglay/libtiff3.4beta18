@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /*
  * Copyright (c) 1990 Regents of the University of California.
  * All rights reserved.
@@ -105,3 +107,5 @@ strtoul(nptr, endptr, base)
 		*endptr = any ? s - 1 : (char *)nptr;
 	return (acc);
 }
+
+#endif

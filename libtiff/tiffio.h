@@ -27,6 +27,13 @@
 #ifndef _TIFFIO_
 #define	_TIFFIO_
 
+#ifdef _MSC_VER
+typedef unsigned long u_long;
+typedef unsigned int u_int;
+typedef unsigned short u_short;
+typedef unsigned char u_char;
+#endif
+
 /*
  * TIFF I/O Library Definitions.
  */

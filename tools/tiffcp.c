@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/tiffcp.c,v 1.43 1995/06/30 05:37:07 sam Exp $ */
 
 /*
@@ -1228,3 +1230,5 @@ pickCopyFunc(TIFF* in, TIFF* out, uint16 bitspersample, uint16 samplesperpixel)
 	    TIFFFileName(in));
 	return (NULL);
 }
+
+#endif

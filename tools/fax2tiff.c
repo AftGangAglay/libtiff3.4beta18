@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/fax2tiff.c,v 1.37 1995/07/17 01:36:52 sam Exp $ */
 
 /*
@@ -359,3 +361,5 @@ usage(void)
 		fprintf(stderr, "%s\n", stuff[i]);
 	exit(EXIT_FAILURE);
 }
+
+#endif

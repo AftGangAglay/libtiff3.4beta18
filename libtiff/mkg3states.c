@@ -365,9 +365,13 @@ WriteTable(FILE* fd, const TIFFFaxTabEnt* T, int Size, const char* name)
     fprintf(fd, "\n};\n");
 }
 
+#ifndef AF_BUILD
 /* initialise the huffman code tables */
-main(int argc, char* argv[])
-{
+main
+#else
+very_fake_main
+#endif
+(int argc, char* argv[]) {
     FILE* fd;
     char* outputfile;
     int c;

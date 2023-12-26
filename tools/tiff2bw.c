@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/tiff2bw.c,v 1.19 1995/07/19 00:39:51 sam Exp $ */
 
 /*
@@ -402,3 +404,5 @@ usage(void)
 		fprintf(stderr, "%s\n", stuff[i]);
 	exit(-1);
 }
+
+#endif

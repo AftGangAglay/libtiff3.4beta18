@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/gif2tiff.c,v 1.24 1995/06/30 00:27:07 sam Exp $ */
 
 /*
@@ -515,3 +517,5 @@ rasterize(int interleaved, char* mode)
 
     _TIFFfree(newras);
 } 
+
+#endif

@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/libtiff/RCS/tif_vms.c,v 1.19 1995/06/06 23:49:31 sam Exp $ */
 
 /*
@@ -580,4 +582,6 @@ TIFFCvtNativeToIEEEDouble(TIFF* tif, u_int n, float* f)
 		fp++;
 	}
 }
+#endif
+
 #endif

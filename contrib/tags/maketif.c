@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /*
  * maketif.c -- creates a little TIFF file, with
  *   the XTIFF extended tiff example tags.
@@ -65,6 +67,4 @@ void WriteImage(TIFF *tif)
 			TIFFError("WriteImage","failure in WriteScanline\n");
 }
 
-
-
-
+#endif

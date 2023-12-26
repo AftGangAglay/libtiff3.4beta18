@@ -26,6 +26,7 @@
 
 #ifndef _TIFFIOP_
 #define	_TIFFIOP_
+
 /*
  * ``Library-private'' definitions.
  */

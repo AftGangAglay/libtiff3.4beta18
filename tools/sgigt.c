@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/sgigt.c,v 1.64 1995/06/21 15:40:54 sam Exp $ */
 
 /*
@@ -977,3 +979,5 @@ setupColormapSupport(TIFFRGBAImage* img)
 	}
     }
 }
+
+#endif

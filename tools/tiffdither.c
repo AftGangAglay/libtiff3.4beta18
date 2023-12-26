@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/tiffdither.c,v 1.24 1995/06/30 00:27:07 sam Exp $ */
 
 /*
@@ -315,3 +317,5 @@ usage(void)
 		fprintf(stderr, "%s\n", stuff[i]);
 	exit(-1);
 }
+
+#endif

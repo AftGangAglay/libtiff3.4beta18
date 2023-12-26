@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/tiffmedian.c,v 1.17 1995/07/01 01:16:55 sam Exp $ */
 
 /*
@@ -889,3 +891,5 @@ bad:
 	_TIFFfree(nextline);
 	_TIFFfree(outline);
 }
+
+#endif

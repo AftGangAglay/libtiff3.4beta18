@@ -52,6 +52,8 @@
  *
  * Only TIFFTAG_BITSPERSAMPLE values that are 1, 2, 4 or 8 are supported.
  */
+#ifndef _MSC_VER
+
 #include <math.h>
 #include <stdio.h>
 #include <tiffio.h>
@@ -1273,3 +1275,5 @@ Usage()
     fprintf(stderr, "\t[-verbose (True | False)]\n");
     exit(0);
 }
+
+#endif

@@ -4,6 +4,7 @@ config.log
 *.obj
 *.a
 *.exe
+*.pdb
 
 *.dSYM
 

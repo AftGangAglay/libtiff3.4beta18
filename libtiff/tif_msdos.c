@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/libtiff/RCS/tif_msdos.c,v 1.13 1995/06/06 23:49:31 sam Exp $ */
 
 /*
@@ -177,3 +179,5 @@ msdosErrorHandler(const char* module, const char* fmt, va_list ap)
 	fprintf(stderr, ".\n");
 }
 TIFFErrorHandler _TIFFerrorHandler = msdosErrorHandler;
+
+#endif

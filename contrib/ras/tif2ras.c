@@ -1,3 +1,4 @@
+#ifndef _MSC_VER
 #ifndef lint
 static char sccsid[] = "@(#)tif2ras.c 1.2 90/03/06";
 #endif
@@ -335,3 +336,4 @@ main(argc, argv)
 
     exit(0);
 }
+#endif

@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/tiffdump.c,v 1.44 1995/07/19 00:39:51 sam Exp $ */
 
 /*
@@ -723,3 +725,5 @@ Fatal(const char* fmt, ...)
 	va_end(ap);
 	exit(-1);
 }
+
+#endif

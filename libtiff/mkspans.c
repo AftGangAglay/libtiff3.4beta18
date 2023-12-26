@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/libtiff/RCS/mkspans.c,v 1.9 1995/06/06 23:49:31 sam Exp $ */
 
 /*
@@ -70,3 +72,5 @@ main()
 	dumparray("bruns", runs[0]);
 	dumparray("wruns", runs[1]);
 }
+
+#endif

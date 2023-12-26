@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 float	ycbcrCoeffs[3] = { .299, .587, .114 };
 /* default coding range is CCIR Rec 601-1 with no headroom/footroom */
 unsigned long refBlackWhite[6] = { 0, 255, 128, 255, 128, 255 };
@@ -157,3 +159,5 @@ check(int R, int G, int B)
 	eCodes++;
     eBits += abs(eR) + abs(eG) + abs(eB);
 }
+
+#endif

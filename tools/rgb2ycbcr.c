@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/rgb2ycbcr.c,v 1.25 1995/06/06 23:45:26 sam Exp $ */
 
 /*
@@ -340,3 +342,5 @@ usage(void)
 		fprintf(stderr, "%s", usageMsg[i]);
 	exit(-1);
 }
+
+#endif

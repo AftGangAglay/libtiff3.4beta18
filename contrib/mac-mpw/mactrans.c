@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /*
  *  mactrans.c  -- Hack filter used to generate MPW files 
  *    with special characters from pure ASCII, denoted "%nn" 
@@ -54,3 +56,5 @@ void to_ascii(void)
 	}
     }
 }
+
+#endif

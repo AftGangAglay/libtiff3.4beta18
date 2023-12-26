@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/thumbnail.c,v 1.8 1995/06/06 23:45:26 sam Exp $ */
 
 /*
@@ -573,3 +575,5 @@ usage(void)
 		fprintf(stderr, "%s\n", stuff[i]);
 	exit(-1);
 }
+
+#endif

@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /* $Header: /usr/people/sam/tiff/tools/RCS/sgisv.c,v 1.22 1995/06/06 23:45:26 sam Exp $ */
 
 /*
@@ -312,3 +314,5 @@ tiffsv(char* name, int x1, int x2, int y1, int y2)
 	(void) TIFFClose(tif);
 	_TIFFfree((char *)scrbuf);
 }
+
+#endif

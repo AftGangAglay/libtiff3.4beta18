@@ -1,3 +1,5 @@
+#ifndef _MSC_VER
+
 /*
  * tiff-bi.c -- create a Class B (bilevel) TIFF file
  *
@@ -83,3 +85,5 @@ main(argc, argv)
     TIFFClose(tif);
     exit(0);
 }
+
+#endif
